@@ -5,12 +5,12 @@
 <!-- 		<listener class-name="partner.helper.linstener.RetryListener"></listener> -->
 		<listener class-name="partner.helper.linstener.ExtentListener"></listener>
 	</listeners>
-	<test  name="Test 1">
+	<test  name="Test A">
 		<classes>
 			<class name="testScripts.TestA"/>
 		</classes>
 	</test> 
-	<test  name="Test 2">
+	<test  name="Test B">
 		<classes>
 			<class name="testScripts.TestB"/>
 		</classes>

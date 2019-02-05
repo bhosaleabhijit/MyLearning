@@ -130,9 +130,7 @@ public class TestBase {
 			wait.pageLoadTime(ObjectReader.reader.getPageLoadTime(), TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		} else {
-			log.info("driver present" + driver.toString());
-			driver=driver;
-			
+			log.info("driver present" + driver.toString());			
 		}
 	}
 
@@ -166,5 +164,38 @@ public class TestBase {
 		}
 		return destFile.getAbsolutePath();
 	}
+	
+	public void getNavigationScreen(WebDriver driver) {
+		log.info("Capturing navigatin screen.");
+		String fileName = captureScreen("", driver);
+		try {
+			test.addScreenCaptureFromPath(fileName);
+		} catch (IOException e) {
+			log.info("Exception in the get navigation screen method: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

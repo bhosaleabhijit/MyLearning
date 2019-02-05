@@ -49,4 +49,8 @@ public class PropertyReader implements ConfigReader {
 
 	}
 
+	public String getBaseURL() {
+		return prop.getProperty("baseURL");
+	}
+
 }

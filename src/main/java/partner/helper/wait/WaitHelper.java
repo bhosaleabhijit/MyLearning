@@ -87,4 +87,11 @@ public class WaitHelper {
 		log.info("Waiting for page to load: " + timeOut + " " + unit.toString());
 		driver.manage().timeouts().pageLoadTimeout(timeOut, unit);
 	}
+
+	public void waitForElement(WebElement element, int timeoutInSeconds) {
+		log.info("waiting for element to display: " + element.toString());
+		WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
+		log.info("Wait for element completed: " + element.toString());
+	}
 }

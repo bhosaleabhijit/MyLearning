@@ -7,5 +7,6 @@ public interface ConfigReader {
 	public int getExplicitWait();
 	public int getPageLoadTime();
 	public BrowserType getBrowserType();
+	public String getBaseURL();
 
 }

@@ -49,11 +49,5 @@ public class AssertHelper
 		log.info("Verifying condition is false: " + status);
 		Assert.assertFalse(status);
 	}
-
-	public static void textContains(String source, String stringToFind) {
-			log.info("Verifying string: " + source + " contains: " + stringToFind);
-			Assert.assertTrue(source.contains(stringToFind));	
-		
-	}
 	
 }
